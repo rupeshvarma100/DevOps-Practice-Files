@@ -1,0 +1,73 @@
+version: 2
+updates:
+  # Docker Image Updates
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "bansikah22"
+    labels:
+      - "dependencies"
+      - "security"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    allow:
+      - dependency-type: "direct"
+    ignore:
+      - dependency-name: "ubuntu"
+
+  # GitHub Actions Updates
+  - package-ecosystem: "github-actions"
+    directory: "/.github/workflows/"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "bansikah22"
+    labels:
+      - "CI/CD"
+      - "dependencies"
+
+  # Go Modules Updates
+  - package-ecosystem: "gomod"
+    directory: "/golang"  
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "bansikah22"
+    labels:
+      - "go"
+      - "dependencies"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+
+  # # Rust (Cargo) Updates
+  # - package-ecosystem: "cargo"
+  #   directory: "/"  
+  #   schedule:
+  #     interval: "weekly"
+  #   reviewers:
+  #     - "bansikah22"
+  #   labels:
+  #     - "rust"
+  #     - "dependencies"
+  #   commit-message:
+  #     prefix: "chore(deps)"
+  #     include: "scope"
+
+  # Terraform Updates
+  - package-ecosystem: "terraform"
+    directory: "/terraform"  
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "bansikah22"
+    labels:
+      - "terraform"
+      - "dependencies"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
