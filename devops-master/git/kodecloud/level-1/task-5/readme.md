@@ -1,6 +1,8 @@
 Problem :
 
 
+  Delete Git Branch
+
 Solution :
 
 thor@jumphost ~$ ssh natasha@172.16.238.15
