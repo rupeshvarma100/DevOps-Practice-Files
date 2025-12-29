@@ -1,5 +1,6 @@
+# Day 14 — Create Key Pair (AWS)
 
-Day 14 - Task:
+##Task Description 
 
 The Nautilus DevOps team is working on setting up secure SSH access for their virtual machines in Azure. One of the requirements is to add the SSH public key of the root user from the Azure client host (landing host) to the nautilus-vm Azure VM's authorized_keys file. This ensures secure and password-less SSH access to the VM.
 
@@ -19,3 +20,6 @@ After adding the public key, make sure that you are able to SSH into the nautilu
 Important Notes:
 Ensure that the VM is up and running before attempting to SSH.
 You may need to adjust the firewall or security group rules for the VM to allow SSH access.
+
+## Solution:
+
